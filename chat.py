@@ -6,12 +6,12 @@ def read_file(filename):
 	lines = []
 	with open(filename, 'r', encoding = 'utf-8-sig') as f:
 		for line in f:
-			lines.append(line.strip())
+			lines.append(line.strip())   #strip() 把換行健去掉
 	return lines
 
 def convert(lines):
 	new = []
-	person = None
+	person = None    #避免當對話紀錄由"對話"開始而不是人名開始, None = 無
 	for line in lines:
 		if line == '玓瑩':
 			person = '玓瑩'
